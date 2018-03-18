@@ -1,0 +1,22 @@
+<ul class="users">
+  <li class="row" *ngFor="let userItem of users" [class.user-blocked]="userItem.isBlocked">
+
+    <div class="col-xs-10 padding-left-0">
+      <span class="badge">{{userItem.id}}</span> <span>{{userItem.name}}</span>
+    </div>
+
+    <div class="btn-group col-xs-2" dropdown>
+      <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle"><span class="caret"></span></button>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li *ngIf="userItem.isBlocked===false" role="menuitem"><a class="dropdown-item" (click)="blockUser(userItem)">Block user</a></li>
+        <li *ngIf="userItem.isBlocked===true" role="menuitem"><a class="dropdown-item" (click)="unBlockUser(userItem)">Unblock user</a></li>
+        <li role="menuitem"><a routerLink="/detail/{{userItem.id}}" class="dropdown-item">Information</a></li>
+        <li role="menuitem"><a routerLink="/edit/{{userItem.id}}" class="dropdown-item">Edit</a></li>
+      </ul>
+    </div>
+  </li>
+
+</ul>
+
+
+
