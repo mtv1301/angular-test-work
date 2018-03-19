@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Ticket} from "../models/ticket";
 
 @Component({
@@ -10,9 +10,9 @@ export class TicketsFormComponent implements OnInit {
 
   ticket = new Ticket();
 
-  onSubmit() { console.log ("Title: " + this.ticket.title + ", Body: " +  this.ticket.body) }
-
-  constructor() { }
+  onSubmit() {
+    console.log("Title: " + this.ticket.title + ", Body: " + this.ticket.body)
+  }
 
   ngOnInit() {
   }
