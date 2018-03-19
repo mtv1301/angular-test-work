@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from '../user';
-import {Ticket} from "../ticket";
+import {Ticket} from "../models/ticket";
 
 @Component({
   selector: 'app-tickets-form',
@@ -9,7 +8,7 @@ import {Ticket} from "../ticket";
 })
 export class TicketsFormComponent implements OnInit {
 
-  ticket = new Ticket ("", "");
+  ticket = new Ticket();
 
   onSubmit() { console.log ("Title: " + this.ticket.title + ", Body: " +  this.ticket.body) }
 
