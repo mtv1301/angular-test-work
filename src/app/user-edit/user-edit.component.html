@@ -2,17 +2,19 @@
 
   <h2>{{ userInput.name | uppercase }} Details</h2>
 
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label>Age:</label>
+        <input type="number" class="form-control" [(ngModel)]="userInput.age" name="title" placeholder="age">
+      </div>
 
-  <div>
-    <label>age:
-      <input type="number" [(ngModel)]="userInput.age" placeholder="age">
-    </label>
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" class="form-control" [(ngModel)]="userInput.name" placeholder="name" name="body">
+      </div>
+      <button class="btn btn-success" (click)="goBack()">go back</button>
+    </form>
   </div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="userInput.name" placeholder="name">
-    </label>
 
-  </div>
-  <button (click)="goBack()">go back</button>
 </div>
