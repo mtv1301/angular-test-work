@@ -8,10 +8,13 @@ import {Ticket} from "../models/ticket";
 })
 export class TicketsFormComponent implements OnInit {
 
+  display='none';
+
   ticket = new Ticket();
 
   onSubmit() {
-    console.log("Title: " + this.ticket.title + ", Body: " + this.ticket.body)
+    console.log("Title: " + this.ticket.title + ", Body: " + this.ticket.body);
+    this.display="block"
   }
 
   ngOnInit() {

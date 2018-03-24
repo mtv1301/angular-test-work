@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-modal-window',
   templateUrl: './modal-window.component.html',
   styleUrls: ['./modal-window.component.css']
 })
-export class ModalWindowComponent implements OnInit {
+export class ModalWindowComponent{
+  @Input() display: string;
 
-  constructor() { }
+  constructor() {
+    this.display='none';
+  }
 
-  ngOnInit() {
+  onCloseHandled(){
+    this.display='none';
   }
 
 }
